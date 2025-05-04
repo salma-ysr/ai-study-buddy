@@ -1,2 +1,3 @@
-# ai-study-buddy
-a command-line AI-powered learning assistant for students
+# AI Study Buddy
+
+A productivity tool to help students balance work and studying!
