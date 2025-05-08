@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>AI Study Buddy</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>AI Study Buddy</h1>
@@ -11,17 +12,19 @@
   <form id="task-form">
     <input type="text" id="task-name" placeholder="Enter your task" required />
 
-    <select id="task-category">
-      <option value="study">📚 Study</option>
-      <option value="selfcare">💆 Self-Care</option>
-      <option value="work">💼 Work</option>
-    </select>
-
-    <select id="task-priority">
-      <option value="high">🔥 High</option>
-      <option value="medium">⏳ Medium</option>
-      <option value="low">🌱 Low</option>
-    </select>
+    <select id="task-category" required>
+        <option value="" disabled selected hidden>📂 Select task type</option>
+        <option value="study">📚 Study</option>
+        <option value="selfcare">💆 Self-Care</option>
+        <option value="work">💼 Work</option>
+      </select>
+      
+      <select id="task-priority" required>
+        <option value="" disabled selected hidden>🚦 Select priority</option>
+        <option value="high">🔥 High</option>
+        <option value="medium">⏳ Medium</option>
+        <option value="low">🌱 Low</option>
+      </select>
 
     <button type="submit">Add Task</button>
   </form>
@@ -30,4 +33,9 @@
 
   <script src="script.js"></script>
 </body>
+
+<!--blobs -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
 </html>
