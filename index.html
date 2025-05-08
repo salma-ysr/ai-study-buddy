@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AI Study Buddy</h1>
+
+  <form id="task-form">
+    <input type="text" id="task-name" placeholder="Enter your task" required />
+
+    <select id="task-category">
+      <option value="study">📚 Study</option>
+      <option value="selfcare">💆 Self-Care</option>
+      <option value="work">💼 Work</option>
+    </select>
+
+    <select id="task-priority">
+      <option value="high">🔥 High</option>
+      <option value="medium">⏳ Medium</option>
+      <option value="low">🌱 Low</option>
+    </select>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
