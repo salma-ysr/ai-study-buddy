@@ -30,10 +30,15 @@
         <option value="low">Low</option>
       </select>
 
+      <input type="number" id="task-duration" placeholder="Duration (mins)" min="5" required />
+
     <button type="submit">Add Task</button>
   </form>
 
   <ul id="task-list"></ul>
+  
+  <button id="generate-plan">✨ Generate My Day Plan</button>
+  <div id="day-plan"></div>
 
   <script src="script.js"></script>
 </body>
