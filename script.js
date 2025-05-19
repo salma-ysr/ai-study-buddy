@@ -26,7 +26,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
-    taskItem.innerText = `${name} [${category.toUpperCase()} - ${priority.toUpperCase()} - ${duration} min]`;
+
+    taskItem.innerHTML = `
+      <span>${name} [${category.toUpperCase()} - ${priority.toUpperCase()} - ${duration} min]</span>
+      <button class="delete-btn">✖️</button>
+    `;
+
+  const deleteBtn = taskItem.querySelector(".delete-btn");
+  deleteBtn.addEventListener("click", () => {
+    tasks = tasks.filter(t => t !== task); // remove from array
+  
+    taskItem.classList.add("removing");
+    setTimeout(() => {
+      taskItem.remove(); 
+    }, 400); 
+  });
+  
+
 
     // Add priority color
     if (priority === "high") {
@@ -66,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const task of sortedTasks) {
       const duration = task.duration;
     
-      if (currentTime + duration > endTime) break;
+      if (currentTime + duration > endTime) continue;
     
       const from = formatTime(currentTime);
       const to = formatTime(currentTime + duration);

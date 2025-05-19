@@ -25,6 +25,23 @@ h1 {
   text-shadow: 0 1px 2px rgba(255, 195, 160, 0.5);
 }
 
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.0rem;
+  color: rgb(251, 195, 167);
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+body.dark .delete-btn {
+  color: #ffb3b3;
+}
+
+.task-item.removing {
+  animation: slideOutLeftFade 0.4s ease forwards;
+}
+
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -153,8 +170,19 @@ button:hover {
 
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.00); }
   100% { transform: scale(1); }
+}
+
+@keyframes slideOutLeftFade {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
 
 /* DARK MODE */
